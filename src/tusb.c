@@ -59,7 +59,11 @@ bool tusb_inited(void)
 {
   return _initialized;
 }
-
+bool tusb_uninited(void)
+{
+	_initialized = false;
+  return true;
+}
 /*------------------------------------------------------------------*/
 /* Debug
  *------------------------------------------------------------------*/

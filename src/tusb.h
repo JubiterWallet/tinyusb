@@ -119,7 +119,7 @@ bool tusb_init(void);
 
 // Check if stack is initialized
 bool tusb_inited(void);
-
+bool tusb_uninited(void);
 // TODO
 // bool tusb_teardown(void);
 
