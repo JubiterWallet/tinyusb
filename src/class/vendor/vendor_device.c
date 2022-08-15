@@ -186,7 +186,7 @@ uint16_t vendord_open(uint8_t rhport, tusb_desc_interface_t const * itf_desc, ui
   TU_VERIFY(p_vendor, 0);
 
   // Open endpoint pair with usbd helper
-  TU_ASSERT(usbd_open_edpt_pair(rhport, tu_desc_next(itf_desc), 2, TUSB_XFER_BULK, &p_vendor->ep_out, &p_vendor->ep_in), 0);
+  TU_ASSERT(usbd_open_edpt_pair(rhport, tu_desc_next(itf_desc), 2, TUSB_XFER_INTERRUPT, &p_vendor->ep_out, &p_vendor->ep_in), 0);
 
   p_vendor->itf_num = itf_desc->bInterfaceNumber;
 
